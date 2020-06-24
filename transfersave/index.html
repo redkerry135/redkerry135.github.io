@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>transfersave - kerry's hellhole</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "transfersave";
+    var mkdocs_page_input_path = "transfersave.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> kerry's hellhole</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../home/">Home</a>
+                    </li>
+                </ul>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">transfersave</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#basic-checkpoint-controls">Basic Checkpoint controls</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#section-1-making-a-backup-of-both-saves">Section 1: Making a backup of both saves</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#section-2-moving-the-save-files">Section 2: Moving the save files</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#section-3-restoring-the-save">Section 3: Restoring the save</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#troubleshooting">Troubleshooting</a>
+    </li>
+    </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../ds-save-transfer/">ds transfersave</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../hardware-broken-transfer/">hardware fucky wucky owo</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">kerry's hellhole</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>transfersave</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <p>In this tutorial, you will be guided on how to move a save file from a cart game to a digital version of the cart game.
+Credit to <code>redkerry135#1055</code> on discord for literally everything</p>
+<h2 id="what-you-need"><strong>What you need:</strong></h2>
+<ol>
+<li>A 3DS modded with Luma3DS CFW.</li>
+<li>Checkpoint (If you do not have Checkpoint, a  direct link to the .cia download is <a href="https://github.com/FlagBrew/Checkpoint/releases/download/v3.7.4/Checkpoint.cia">here</a>.)</li>
+<li>A 3DS Cartridge with a save in it.</li>
+<li>A digital version of the 3DS Cartridge, either obtained through <a href="https://github.com/knight-ryu12/godmode9-layeredfs-usage/wiki/CartInstall-guide">Cartinstall</a> or a legal cartridge dump. There must be a save file in this version. If there isn't a save file, make one in-game.</li>
+<li>An SD Card adapter (ftp with ftpd works if necessary)</li>
+</ol>
+<h3 id="basic-checkpoint-controls">Basic Checkpoint controls</h3>
+<p>(this section is directed to those whose SELECT button(s) are broken)</p>
+<ul>
+<li>Use the DPad or Circle Pad to navigate around the app.</li>
+<li>Press A to select a game.</li>
+<li>After selecting a game, you can press L to backup the save, or R to restore the save.</li>
+<li>You can also enable cheats for the selected game. Usage guide <a href="https://3ds.eiphax.tech/cpcheats.html">here</a>.</li>
+<li>You can switch to extdata saves by pressing X.</li>
+<li>You can backup every title at once by holding Y, then press L.</li>
+<li>You can also delete certain backups by selecting a game, selecting a backed up save, and then pressing X.</li>
+<li>Hold B to refresh the app.</li>
+</ul>
+<h3 id="section-1-making-a-backup-of-both-saves">Section 1: Making a backup of both saves</h3>
+<ol>
+<li>On your 3DS, open Checkpoint and make a backup of both the cart and digital game.</li>
+<li>Name the cart's save <code>Cart</code> and name the digital's save <code>digital</code></li>
+<li>Close Checkpoint and turn off your 3DS.</li>
+</ol>
+<h3 id="section-2-moving-the-save-files">Section 2: Moving the save files</h3>
+<ol>
+<li>Eject the SD Card from your 3DS and insert it in your computer.</li>
+<li>In your SD Card, go to the folder named <code>3ds</code>. In this folder, there should be another folder named <code>Checkpoint</code>.</li>
+<li>In the Checkpoint folder, open another folder named <code>saves</code>.</li>
+<li>Inside the saves folder, look for the folders consisting of your cart and digital game's name.</li>
+<li>Copy the file(s) from the game's <code>cart</code> folder into the <code>digital</code> folder. Replace the files.</li>
+<li>Eject the SD Card and put it back in your 3DS.</li>
+</ol>
+<h3 id="section-3-restoring-the-save">Section 3: Restoring the save</h3>
+<ol>
+<li>Power on your 3DS and open Checkpoint.</li>
+<li>Wait for the apps to load. If the digital game does not appear, hold B to refresh.</li>
+<li>Select the digital game and press R to restore the save.</li>
+<li>You're done! You can now continue playing where you left off.</li>
+</ol>
+<h3 id="troubleshooting">Troubleshooting</h3>
+<p>Q: My game doesn't appear in checkpoint!                                                                            <br />
+A: Hold B to refresh, if you still don't see it, double check if there is a save for the game.</p>
+<p>Q: My old save is still in the digital copy of the game!                                                            <br />
+A: Make sure you replaced the files from the backup, and didn't accidentally press Skip or Cancel while copying.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../ds-save-transfer/" class="btn btn-neutral float-right" title="ds transfersave">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../home/" class="btn btn-neutral" title="Home"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../home/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../ds-save-transfer/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
