@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>uncommon 3ds issues - kerry's hellhole</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "uncommon 3ds issues";
+    var mkdocs_page_input_path = "yes.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> kerry's hellhole</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../home/">Home</a>
+                    </li>
+                </ul>  
+                <ul>   
+                    <li class="toctree-l1"><a class="reference internal" href="../transfersave/">transfersave</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../ds-save-transfer/">ds transfersave</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../hardware-broken-transfer/">manual movable transfer</a>
+                    </li>
+                </ul>
+                </ul> 
+                    <li class="toctree-l1"><a class="reference internal" href="../dsiware-dump/">DSI DUMPSTER</a>
+                    </li>
+                </ul>
+                </ul>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">uncommon 3ds issues</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#black-screen-flashing-light">black screen, flashing light</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#black-screen-solid-light">black screen, solid light</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#nwm-crash">nwm crash</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#boss-crash-on-home-menu">boss crash on home menu</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#qtm-crash-on-boot">qtm crash on boot</a>
+          
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">kerry's hellhole</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>uncommon 3ds issues</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+
+<p>This page lists some common 3ds issues users may find while installing or using cfw.</p>
+
+<h3 id="blackscreenbluelightflashesoncethenturnsoff">black screen, blue light flashes once then turns off</h3>
+
+<p><code>boot.firm</code> is missing or can't be detected. This could be due to a few reasons:  </p>
+
+<ul>
+<li><p>Ensure that it's on the sd root (the sd root is what you see when you open up your sd card using a way to read the sd).  </p></li>
+
+<li><p>If you're using something like winrar or winzip to extract the file, please stop using that, use 7zip instead. Winrar and winzip corrupt files often, 7zip is known to extract files without corrupting them. The download page for 7zip is <a href="https://www.7-zip.org/">here</a>.  </p></li>
+
+<li><p>Your sd card and/or sd reader is failing, check your sd card using h2testw, a guide for Windows is <a href="https://3ds.hacks.guide/h2testw-(windows).html">here</a>, the guide for Linux (uses f3) is <a href="https://3ds.hacks.guide/f3-(linux).html">here</a>, and the guide for Mac (uses f3x) is <a href="https://3ds.hacks.guide/f3x-(mac).html">here</a>. <br />
+ Follow the instructions of Section 1 <code>Verifying the integrity of an SD card</code> from <a href="https://3ds.eiphax.tech/sd.html">here</a>. If the test passes, your sd reader is likely the issue. If the test fails, you will <br />
+ need to get a new sd card since this sd card is corrupted.  </p></li>
+</ul>
+
+<h3 id="blackscreenbluelightstayson">black screen, blue light stays on</h3>
+
+<p>This could be caused by many things such as specific folders/files on the sd being corrupted, nand failure, or a literal luma bug.  </p>
+
+<ul>
+<li><p>Firstly, try booting without the sd inserted. If it boots, skip the next point and do the third point instead. If it stays on a black screen, proceed to the next point.  </p></li>
+
+<li><p>Take any game cart out, keep the sd card in, power on your 3ds and leave it for around 15 minutes. If your console boots, it's unlikely you'll get this again. If you find yourself waiting for longer than 15 minutes and still have a black screen, do the next point's instructions.  </p></li>
+
+<li><p>On your sd card, go to sd:/Nintendo 3DS/<your id0>/<your id1>/extdata, then delete the folder which matches your region: EUR <code>000002ce</code>, USA <code>000002cd</code>, JPN <code>000002cc</code> (we are clearing theme data, this does not affect saves). After that, inside the extdata folder, delete the folder matching your region: EUR <code>00000098</code>, USA <code>0000008f</code>, JPN <code>00000082</code>, KOR <code>000000A9</code> (we are clearing <br />
+ home menu extdata here, this also will not affect saves). <br />
+ After the two folders are deleted, reboot your console with the sd card inserted. If the console stays black with and without the sd in, go to the next point below and follow <br />
+ the instructions there.  </p></li>
+
+<li><p>If you have a nand backup, try restoring it in gm9. Instructions on how to do so are <a href="https://3ds.hacks.guide/godmode9-usage#restoring-a-nand-backup">here</a>. If you do not have a nand backup or the nand restore fails, do a ctrtransfer instead. Guide for that is <a href="https://3ds.hacks.guide/ctrtransfer">here</a>. <br />
+ If you are still getting black screens, you should join the <a href="https://discord.gg/C29hYvh">Nintendo Homebrew Discord</a> and ask for more assistance there. Mention that you've tried all of the above steps.</p></li>
+</ul>
+
+<h3 id="nwmcrash">nwm crash</h3>
+
+<p>This error happens when your 3ds's wifi card is dead.</p>
+
+<ul>
+<li>You will need to disable wireless communication on your 3ds until you can replace the wifi card. You won't get the crashes anymore, but you also won't be able to use online services like eShop or online game features.</li>
+</ul>
+
+<h3 id="bosscrashonhomemenu">boss crash on home menu</h3>
+
+<p>This error happens because SpotPass is broken on 11.12.</p>
+
+<ul>
+<li>You will need to do a safemode update. Power off your console, hold L, R, Up (dpad), and A, then press Power and keep holding those buttons until you get prompted with a system update. Accept this update, once it's done reboot the console, the crashes shouldn't happen anymore.  </li>
+</ul>
+
+<h3 id="qtmcrashonboot">qtm crash on boot</h3>
+
+<p>This error happens when your camera is bricked/broken.</p>
+
+<ul>
+<li>Until you're able to disconnect the camera and/or replace it, download the qtm bypass boot.firm from <a href="https://cdn.discordapp.com/attachments/246402376099954689/631645464277680139/boot.firm">here</a>, make sure it's named exactly <code>boot.firm</code> then copy it to your sd root and replace the boot.firm currently there when asked.</li>
+</ul>
