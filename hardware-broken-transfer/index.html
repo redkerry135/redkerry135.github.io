@@ -148,16 +148,6 @@
 </ol>
 <p>i. Go back to GM9's main menu, press R + START to power off, and eject the SD Card and insert it in your computer.</p>
 <p>ii. Press R + X to rename the file. Rename the <code>movable</code> file to <code>movable.sed</code>.</p>
-</ol> 
-<h3 id="extractingthemovablefilewithninfsandanandbackup">Extracting the movable file with ninfs and a nand backup</h3>
-<ol>
-<li>Ensure you have a nand backup saved somewhere, take a note of where it is once you find it. Also make sure you have a boot9.bin from somewhere.</li>
-<li>Download <a href="https://github.com/ihaveamac/ninfs/releases">ninfs</a> (windows users will also need to download <a href="http://www.secfs.net/winfsp/rel/">winfsp</a>)</li>
-<li>Run ninfs, wait for the GUI to load, then drag and drop your NAND backup onto the <code>- Choose a type or drag a file/directory here -</code> tab. You do not need to worry about the OTP tab, nand backups include essential.exefs.</li>
-<li>On the bottom, you will see a message and a button asking you to fix boot9.bin. Click the button and upload boot9.bin.</li>
-<li>Make a new folder on desktop or somewhere on your computer, then on ninfs select the mount point to Directory and drag and drop the folder into the <code>Drag a directory here or browse...</code> box, then click Mount.</li>
-<li>Your NAND backup should now be mounted, ninfs should automatically open the mounted backup. Open the <code>essential</code> folder from the mount, copy <code>movable.bin</code> to your desktop or another folder, then close ninfs. <strong>Note that closing ninfs will delete the mount, so please make sure you've copied the file(s) you need before closing ninfs.</strong></li>
-<li>Rename <code>movable.bin</code> to <code>movable.sed</code>. You can now use this file for the rest of the guide.</li>
 </ol>  
 <h3 id="replacing-the-movablesed">Replacing the movable.sed</h3>
 <ol>
