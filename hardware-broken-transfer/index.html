@@ -81,12 +81,8 @@
                     </li>                  
                 </ul>
                 </ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../dsiware-dump/">DSI DUMPSTER</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../dsiware-dump/">dumping dsiware</a>
                     </li>
-                </ul>
-                </ul>                 
-                    <li class="toctree-l1"><a class="reference internal" href="../uncommon-issues/">uncommon 3ds issues</a>
-                    </li> 
        
                      </li>
                 </ul>
@@ -131,32 +127,27 @@
 
 <li><p><code>essential.exefs</code>, which should have been backed up after completing Plailect's <a href="https://3ds.hacks.guide/finalizing-setup">finalizing setup</a>. A full NAND backup can also be used.</p></li>
 
-<li><p><a href="https://github.com/ihaveamac/faketik/releases/download/v1.1.1/faketik.3dsx">Faketik.3dsx</a></p></li>
+<li><p><a href="https://github.com/ihaveamac/faketik/releases/download/v1.1.2/faketik.3dsx">Faketik.3dsx</a></p></li>
 </ul>
 </ol>
 <h3 id="extracting-the-movable-file-from-essentialexefs">Extracting the movable file from essential.exefs</h3>
 <ol>
-<li>Insert your SD Card to your computer and retrieve the <code>essential.exefs</code> from when you made a NAND Backup on your previous broken console.</li>
+<li>Insert your SD Card to your computer and retrieve the <code>essential.exefs</code> from when you made a NAND Backup.</li>
 <li>Put the <code>essential.exefs</code> anywhere on the SD Card (for now, just put it on the SD Card's root)</li>
 <li>Eject your SD Card and insert it into your new 3DS console.</li>
 <li>Boot GodMode9 by holding Start, then press Power.</li>
 <li>Press A on <code>[0:] SDCARD</code></li>
 <li>Select your <code>essential.exefs</code>, and press A on <code>Mount as EXEFS image</code>.</li>
 <li>Look for a file named <code>movable</code> inside the <code>essential.exefs</code> image mount.</li>
-<li>Copy the <code>movable</code> file to the root of your SD Card.</li>
-<li>There are two possible ways to do this step:</li>
-</ol>
-<p>i. Go back to GM9's main menu, press R + START to power off, and eject the SD Card and insert it in your computer.</p>
-<p>ii. Press R + X to rename the file. Rename the <code>movable</code> file to <code>movable.sed</code>.</p>
+<li>Press Y on the <code>movable</code> file, then proceed to the next section.</li>
 </ol>  
 <h3 id="replacing-the-movablesed">Replacing the movable.sed</h3>
 <ol>
-<li>(if you did part i, eject the SD Card and insert it into your new 3DS, and boot GM9.)
-    Navigate to <code>[1:] SYSNAND CTRNAND</code> &gt; <code>private</code> and delete the <code>movable.sed</code> file that is found in there.</li>
-<li>Press B until you are back at GM9's main menu.</li>
-<li>Locate your renamed <code>movable.sed</code> in <code>[0:] SDCARD</code> and copy it to <code>[1:] SYSNAND CTRNAND</code> &gt; <code>private</code></li>
-<li>Press B until you're back at GM9's main menu, then press R and A simultaneously and select Fix CMACs for drive. </li>
-<li>Press B until you are back at GM9's main menu, then press Start to reboot.</li>
+<li>Press B to exit the <code>essential.exefs</code> mount.</li>
+<li>Enter the <code>SYSNAND CTRNAND</code> drive, then enter the <code>private</code> folder.</li>
+<li>Press A on the <code>movable.sed</code> file you see, then select inject data @offset.</li>
+<li>Keep the offset at 0, then press A. Unlock write permissions when prompted.</li>  
+<li>Relocking write permissions isn't necessary since they get relocked automatically after a reboot, but you can relock them just to be safe. Press Start to reboot the console.</li>
 <li>Your console will act like it has just been formatted, this is meant to happen. Proceed through initial setup.</li>
 </ol>
 <h3 id="getting-your-apps-back">Getting your apps back</h3>
