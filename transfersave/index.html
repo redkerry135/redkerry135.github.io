@@ -56,12 +56,6 @@
     <ul class="current">
     <li class="toctree-l2"><a class="reference internal" href="#basic-checkpoint-controls">Basic Checkpoint controls</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#section-1-making-a-backup-of-both-saves">Section 1: Making a backup of both saves</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#section-2-moving-the-save-files">Section 2: Moving the save files</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#section-3-restoring-the-save">Section 3: Restoring the save</a>
-    </li>
     <li class="toctree-l2"><a class="reference internal" href="#troubleshooting">Troubleshooting</a>
     </li>
     </ul>
@@ -116,14 +110,10 @@
 <ol>
 <ul>
 <li>A 3DS modded with Luma3DS CFW</li>
-
 <li>Checkpoint (If you do not have Checkpoint, a direct link to the .cia download is <a href="https://github.com/FlagBrew/Checkpoint/releases/download/latest/Checkpoint.cia">here</a>.)</li>
-
 <li>A 3DS Cartridge with a save in it</li>
+<li>A digital version of the 3DS cartridge</li>
 
-<li>A digital version of the 3DS Cartridge, either obtained through <a href="https://github.com/knight-ryu12/godmode9-layeredfs-usage/wiki/CartInstall-guide">Cartinstall</a>, a legal cartridge dump, or an eshop-obtained/purchased title. There must be a save file in this version. If there isn't a save file, make one in-game</li>
-
-<li>A way to read/write to the SD card (gm9 on 3ds for example)</li>
 </ul>
 </ol>
 <h3 id="basic-checkpoint-controls">Basic Checkpoint controls</h3>
@@ -138,46 +128,18 @@
 <li>You can also delete certain backups by selecting a game, selecting a backed up save, and then pressing X.</li>
 <li>Hold B to refresh the app.</li>
 </ul>
-<h3 id="section-1-making-a-backup-of-both-saves">Section 1: Making a backup of both saves</h3>
-<ol>
-<li>On your 3DS, open Checkpoint and make a backup of both the cart and digital game.</li>
-<li>Name the cart's save <code>Cart</code> and name the digital's save <code>digital</code></li>
-<li>Close Checkpoint and turn off your 3DS.</li>
+
+<h3 id="steps">steps</h3>
 </ol>
-<h3 id="section-2-moving-the-save-files">Section 2: Moving the save files</h3>
-<ol>
-<li>In a file explorer of your choice, open your SD card.</li>
-<li>In your SD Card, go to the folder named <code>3ds</code>. In this folder, there should be another folder named <code>Checkpoint</code>.</li>
-<li>In the Checkpoint folder, open another folder named <code>saves</code>.</li>
-<li>Inside the saves folder, look for the folders consisting of your cart and digital game's name.</li>
-<li>Copy the file(s) from the game's <code>cart</code> folder into the <code>digital</code> folder. Replace the files.</li>
-<li>Close the file explorer, and put the SD card back into the 3ds.</li>
-</ol>
-<h3 id="section-3-restoring-the-save">Section 3: Restoring the save</h3>
-<ol>
-<li>Power on your 3DS and open Checkpoint.</li>
-<li>Wait for the apps to load. If the digital game does not appear, hold B to refresh.</li>
-<li>Select the digital game and press R to restore the save.</li>
-<li>You're done! You can now continue playing where you left off.</li>
-</ol>
-<h3 id="troubleshooting">Troubleshooting</h3>
-<p>Q: My game doesn't appear in checkpoint!                                                                            <br />
-A: Hold B to refresh, if you still don't see it, double check if there is a save for the game.</p>
-<p>Q: My old save is still in the digital copy of the game!                                                            <br />
-A: Make sure you replaced the files from the backup, and didn't accidentally press Skip or Cancel while copying.</p>
-<p>Q: Checkpoint crashes when I open it!                                                            <br />
-A: Homebrew apps aren't the most stable programs. Reboot, and try again.</p>              
+<li>1. Power on your 3DS and open Checkpoint</li>
+<li>2. Wait for your apps to load before selecting the save you want to transfer. If it doesn't appear, hold B to refresh and make sure you have a save file in the game</li>
+<li>3. Press L to backup the cart's save file, give the save any name you want</li>
+<li>4. On the digital copy, press the save's name and then press the R button to restore it</li>
+<li>5. Congrats you're done</li>              
             </div>
           </div>
           <footer>
   
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="../ds-save-transfer/" class="btn btn-neutral float-right" title="ds transfersave">Next <span class="icon icon-circle-arrow-right"></span></a>
-      
-      
-        <a href="../home/" class="btn btn-neutral" title="Home"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-      
     </div>
   
 
