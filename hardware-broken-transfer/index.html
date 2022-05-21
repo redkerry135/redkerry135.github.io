@@ -52,11 +52,11 @@
                     </li>
                 </ul>
                 <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../transfersave/">3ds save transfer</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../transfersave/">transfersave</a>
                     </li>
                 </ul>
                 <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../ds-save-transfer/">nds save transfer</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../ds-save-transfer/">ds transfersave</a>
                     </li>
                 </ul>
                 <ul class="current">
@@ -77,15 +77,6 @@
     <li class="toctree-l2"><a class="reference internal" href="#troubleshooting">Troubleshooting</a>
     </li>           
     </ul>             
-                
-                    </li>                  
-                </ul>
-                </ul>
-       
-                     </li>
-                </ul>
-      </div>
-    </div>
     </nav>
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
@@ -115,28 +106,33 @@
 </div>
           <div role="main">
             <div class="section">
-     <p>This guide can potentially cause unexpected results if done wrong. Please ensure you <strong>read the steps carefully</strong> to prevent these unexpected results from happening.</p>
-     
-     <p>If you are confused in any way, <a href="https://discord.gg/C29hYvh">join the Nintendo Homebrew server</a> and ask for help in the 3DS assistance channels.</p>
+    <h5>info - please read before starting</h5>
               
-     <p>Note that uninstalling CFW anytime after doing these steps <strong>will</strong> brick your console, as we have tampered with console-unique files which can have dangerous effects if stock/native.firm is booted.</p>         
+    <p>This guide can potentially cause unexpected results if done wrong. Please ensure you <strong>read the steps carefully</strong> to prevent these unexpected results from happening.</p>
+     
+    <p>Please do not use a movable.sed from bruteforcemovable for this guide. Doing so will cause a brick.</p>
+
+    <p>If you are confused in any way, <a href="https://discord.gg/C29hYvh">join the Nintendo Homebrew server</a> and ask for help in the 3DS assistance channels.</p>
+              
+    <p>Note that uninstalling CFW anytime after doing these steps <strong>will</strong> brick your console, as we have tampered with console-unique files which can have dangerous effects if stock/native.firm is booted.</p>         
 <h3 id="whatyouneed">What you need:</h3>
 
 <ul>
 <li><p>Two 3DS consoles, both modded with Luma3DS CFW</p></li>
 
-<li><p><code>essential.exefs</code>, which should have been backed up after completing Plailect's <a href="https://3ds.hacks.guide/finalizing-setup">finalizing setup</a></p></li>
+<li><p><code>essential.exefs</code>, or <code>movable.sed</code></p></li>
 
 <li><p><a href="https://github.com/ihaveamac/faketik/releases/download/v1.1.2/faketik.3dsx">Faketik.3dsx</a></p></li>
 </ul>
 </ol>
 <h3 id="extracting-the-movable-file-from-essentialexefs">Extracting the movable file from essential.exefs</h3>
 <ol>
+<p>note: this section is only relevant if you do not have the movable.sed from your previous console.</p>
 <li>Insert your SD Card to your computer and retrieve the <code>essential.exefs</code> from when you made a NAND Backup.</li>
 <li>Put the <code>essential.exefs</code> anywhere on the SD Card (for now, just put it on the SD Card's root)</li>
 <li>Eject your SD Card and insert it into your new 3DS console.</li>
 <li>Boot GodMode9 by holding Start, then press Power.</li>
-<li>Press A on <code>[0:] SDCARD</code></li>
+<li>Press A on the <code>[0:] SDCARD</code></li>
 <li>Select your <code>essential.exefs</code>, and press A on <code>Mount as EXEFS image</code>.</li>
 <li>Look for a file named <code>movable</code> inside the <code>essential.exefs</code> image mount.</li>
 <li>Press Y on the <code>movable</code> file, then proceed to the next section.</li>
@@ -146,22 +142,18 @@
 <li>Press B to exit the <code>essential.exefs</code> mount.</li>
 <li>Enter the <code>SYSNAND CTRNAND</code> drive, then enter the <code>private</code> folder.</li>
 <li>Press X on the <code>movable.sed</code> file, unlock write permissions when prompted.</li>
-<li>Press Y to paste the movable.sed in the clipboard.</li>
-<li>Select the pasted movable.sed file, choose to fix CMACs, then reboot.</li>
+<li>Press Y to paste the movable in the clipboard, rename it to <code>movable.sed</code></li>
+<li>Press B until you are back at the main menu, press R + A on the SysNAND CTRNAND drive, select "Fix CMACS for drive"</li>
+<li>Reboot.</li>
 <li>Your console will act like it has just been formatted, this is meant to happen. Proceed through initial setup.</li>
 </ol>
 <h3 id="getting-your-apps-back">Getting your apps back</h3>
 <ol>
 <li>Use the Download Play method to get to the homebrew launcher (go to the download play app, press L + Down(dpad) + Select &gt; scroll down to miscellaneous options &gt; Switch the hb. title to the current app, then relaunch download play)</li>
 <li>Run faketik.3dsx</li>
-<li>When faketik has done its amazing magic, you can close download play. Your apps will appear as gifts on the home menu. Do not worry, your saves are inside.</li>
+<li>When faketik has done its magic, you can close download play. Your apps will appear as gifts on the home menu. Do not worry, your saves are inside.</li>
 <li>Congratulations, you just performed a complex procedure.</li>
-</ol>
-<h2 id="troubleshooting">Troubleshooting</h2>
-<p>Q: GM9 doesn't load when I hold start on boot!   <br />
-A: Ensure <code>GodMode9.firm</code> is inside <code>luma</code>/<code>payloads</code>. Check for any mistakes in the spelling for the folder names.    <br />
-  - If you get a black screen when booting GM9, update your GM9 version to 1.9.2 (download link <a href="https://github.com/d0k3/GodMode9/releases/download/v1.9.2pre1/GodMode9-v1.9.2pre1-20200820205253.zip">here</a>), and make sure you use a good extracting tool like <a href= "https://www.7-zip.org/">7zip</a> to extract the .zip file.</p>
-              
+</ol>              
             </div>
           </div>
           <footer>
